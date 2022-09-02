@@ -7,13 +7,7 @@
 package serverwofacade;
 public class ServerWOFacade {
     public static void main(String[] args) {
-        ScheduleServer scheduleServer = new ScheduleServer();
-	scheduleServer.startBooting();
-	scheduleServer.readSystemConfigFile();
-	scheduleServer.init();
-	scheduleServer.initializeContext();
-	scheduleServer.initializeListeners();
-	scheduleServer.createSystemObjects();
+        FacadeServer scheduleServer = new FacadeServer();
 	System.out.println("Start working......");
 	System.out.println("After work done.........");
 	scheduleServer.releaseProcesses();
