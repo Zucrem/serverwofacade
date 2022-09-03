@@ -8,14 +8,9 @@ package serverwofacade;
 public class ServerWOFacade {
     public static void main(String[] args) {
         FacadeServer scheduleServer = new FacadeServer();
+        scheduleServer.startServer();
 	System.out.println("Start working......");
 	System.out.println("After work done.........");
-	scheduleServer.releaseProcesses();
-	scheduleServer.destory();
-	scheduleServer.destroySystemObjects();
-	scheduleServer.destoryListeners();
-	scheduleServer.destoryContext();
-	scheduleServer.shutdown();
+	scheduleServer.closeServer();
     }
-    
 }

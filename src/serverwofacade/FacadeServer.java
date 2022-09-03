@@ -9,8 +9,10 @@ package serverwofacade;
  * @author Zucrem
  */
 public class FacadeServer{
+
+    private ScheduleServer server = new ScheduleServer();
+    
     public void startServer(){
-        ScheduleServer server = new ScheduleServer();
         server.startBooting();
         server.readSystemConfigFile();
         server.init();
@@ -20,7 +22,6 @@ public class FacadeServer{
     }
 
     public void closeServer() {
-        ScheduleServer server = new ScheduleServer();
         server.releaseProcesses();
         server.destory();
         server.destroySystemObjects();
